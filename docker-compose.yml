@@ -4,7 +4,7 @@ services:
         ports:
             - '27017:27017'
         volumes:
-            - '~/mongodb/database:/data/db'
+            - './DB/mongodb/database:/data/db'
         restart: unless-stopped
         image: mongo
         container_name: mongodb
@@ -12,10 +12,13 @@ services:
           - PUID=1000
           - PGID=1000
     sqlserv:
+        build:
+            context: ./Docker
+            dockerfile: Dockerfile
         ports:
             - '1433:1433'
         volumes:
-            - '~/sqlserv/database:/data/db'
+            - './DB/sqlserver/database:/data/db'
         restart: unless-stopped
         image: microsoft/mssql-server-linux:2017-latest
         container_name: sqlserv
