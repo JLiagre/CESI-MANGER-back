@@ -1,11 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="729deed3-bcd7-4cef-8daf-2d3ba4ece26f" name="Default Changelist" comment="Docker setup for the following databases with initial settings/structure: &#10;- microsoft sql server&#10;&#10;Docker init for :&#10;- mongodb" />
+    <list default="true" id="729deed3-bcd7-4cef-8daf-2d3ba4ece26f" name="Default Changelist" comment="Added mongodb connection files with working connection.">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Centrale/babel.config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Centrale/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Centrale/mongodb_connection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Centrale/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Centrale/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Centrale/sqlserver_connection.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Centrale/yarn-error.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Centrale/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/core-util-is/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/core-util-is/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/core-util-is/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/inherits/inherits.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/inherits/inherits_browser.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/inherits/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/isarray/.npmignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/isarray/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/isarray/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/process-nextick-args/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/process-nextick-args/license.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/process-nextick-args/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/util-deprecate/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/util-deprecate/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/node_modules/util-deprecate/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yarn-error.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
@@ -21,9 +57,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/DB/mongodb/database" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/DB/mongodb/database" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -34,7 +76,14 @@
       <option name="presentableId" value="Default" />
       <updated>1623856080228</updated>
       <workItem from="1623856086315" duration="342000" />
-      <workItem from="1624266044819" duration="648000" />
+      <workItem from="1624266044819" duration="1437000" />
+      <workItem from="1624267522293" duration="635000" />
+      <workItem from="1624353526475" duration="678000" />
+      <workItem from="1624354801752" duration="3862000" />
+      <workItem from="1624358897760" duration="1536000" />
+      <workItem from="1624365592270" duration="139000" />
+      <workItem from="1624369974597" duration="681000" />
+      <workItem from="1624448699685" duration="4525000" />
     </task>
     <task id="LOCAL-00001" summary="Docker setup for the following databases : &#10;- mongodb&#10;- microsoft sql server">
       <created>1623856389069</created>
@@ -78,6 +127,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Docker setup for the following databases : &#10;- mongodb&#10;- microsoft sql server" />
     <MESSAGE value="Docker setup for the following databases with initial settings/structure: &#10;- microsoft sql server&#10;&#10;Docker init for :&#10;- mongodb" />
-    <option name="LAST_COMMIT_MESSAGE" value="Docker setup for the following databases with initial settings/structure: &#10;- microsoft sql server&#10;&#10;Docker init for :&#10;- mongodb" />
+    <MESSAGE value="Added mongodb connection files with working connection." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added mongodb connection files with working connection." />
   </component>
 </project>
