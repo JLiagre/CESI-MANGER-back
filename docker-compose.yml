@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-    mongodb:
+  mongodb:
         ports:
             - '27017:27017'
         volumes:
@@ -8,11 +8,18 @@ services:
         restart: unless-stopped
         image: mongo
         container_name: mongodb
+        hostname: mongodb
         environment:
           MONGO_INITDB_ROOT_USERNAME: sa
           MONGO_INITDB_ROOT_PASSWORD: cesimanger1234ABC
           MONGO_INITDB_DATABASE: cesiManger
-    sqlserv:
+        healthcheck:
+          test: echo 'db.runCommand("ping").ok' | mongo mongodb:27017/test --quiet
+          interval: 10s
+          timeout: 10s
+          retries: 5
+          start_period: 40s
+  sqlserv:
         build:
             context: ./Docker
             dockerfile: Dockerfile
@@ -23,8 +30,32 @@ services:
         restart: unless-stopped
         image: microsoft/mssql-server-linux:2017-latest
         container_name: sqlserv
+        hostname: sqlserver
         environment:
           - ACCEPT_EULA=Y
           - SA_PASSWORD=cesimanger1234ABC
           - PUID=1000
           - PGID=1000
+        healthcheck:
+          test: [ "CMD", "/opt/mssql-tools/bin/sqlcmd", "-${SQLSERVER_USERNAME}", "-${SQLSERVER_PASSWORD}", "-${SQLSERVER_DB}", "select 1" ]
+          interval: 1s
+          retries: 20
+  centrale:
+    build:
+      context: ./Centrale
+      dockerfile: Dockerfile
+    ports:
+      - '8080:8080'
+    restart: unless-stopped
+    image: nodejs
+    container_name: centrale
+    volumes:
+      - ./Centrale:/home/node/app
+      - ./Centrale/node_modules:/home/node/app/node_modules
+    env_file: .env
+    depends_on:
+      - mongodb
+      - sqlserv
+    environment:
+      WAIT_HOSTS: ${SQLSERVER_HOSTNAME}:1433, ${MONGO_HOSTNAME}:27017
+      WAIT_AFTER: 120
