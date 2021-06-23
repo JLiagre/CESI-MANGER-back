@@ -45,7 +45,7 @@ services:
       context: ./Centrale
       dockerfile: Dockerfile
     ports:
-      - '8080:8080'
+      - '40253:40253'
     restart: unless-stopped
     image: nodejs
     container_name: centrale
