@@ -12,6 +12,14 @@ db.connect();
 db.getUsers();
 db.getUser('Test', 'test');
 
+
+//app.use(logger('dev'))
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
+//app.use(cookieParser())
+app.use('/', routes)
+
+
 app.use(morgan('dev'));
 
 app.listen(PORT, HOST, () => {
