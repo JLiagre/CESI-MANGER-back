@@ -1,9 +1,10 @@
 const sql = require('mssql')
+
 const sqlConfig = {
-    user: "sa",
-    password: "cesimanger1234ABC",
-    database: "cesimanger",
-    server: 'localhost',
+    user: process.env.SQLSERVER_USERNAME,
+    password: process.env.SQLSERVER_PASSWORD,
+    database: process.env.SQLSERVER_DB,
+    server: process.env.SQLSERVER_HOSTNAME,
     pool: {
         max: 10,
         min: 0,
@@ -21,8 +22,7 @@ module.exports = class Sqlserver_connection {
         console.log("entree")
         try {
             await sql.connect(sqlConfig)
-            const result = await sql.query`select *
-                                           from Users `
+            const result = await sql.query`SELECT name FROM master.sys.databases`
             console.dir(result)
             console.log("result")
         } catch (err) {

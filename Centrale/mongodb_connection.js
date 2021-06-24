@@ -1,6 +1,6 @@
 const {MongoClient} = require('mongodb');
 
-const uri = "mongodb://sa:cesimanger1234ABC@localhost/test?retryWrites=true&w=majority&authSource=admin";
+const uri = `mongodb://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_HOSTNAME}/test?retryWrites=true&w=majority&authSource=admin`;
 const client = new MongoClient(uri);
 
 module.exports = class Mongodb_connection {
@@ -23,7 +23,6 @@ module.exports = class Mongodb_connection {
         } finally {
             await client.close();
         }
-
     }
 }
 

@@ -2,34 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="729deed3-bcd7-4cef-8daf-2d3ba4ece26f" name="Default Changelist" comment="Added mongodb connection files with working connection.">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Centrale/babel.config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Centrale/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Centrale/mongodb_connection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Centrale/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Centrale/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Centrale/sqlserver_connection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Centrale/yarn-error.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Centrale/yarn.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/core-util-is/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/core-util-is/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/core-util-is/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/inherits/inherits.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/inherits/inherits_browser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/inherits/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/isarray/.npmignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/isarray/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/isarray/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/process-nextick-args/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/process-nextick-args/license.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/process-nextick-args/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/util-deprecate/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/util-deprecate/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/util-deprecate/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn-error.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Centrale/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/mongodb_connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/mongodb_connection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/sqlserver_connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/sqlserver_connection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,14 +41,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/DB/mongodb/database" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/DB/mongodb/database" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -84,6 +72,11 @@
       <workItem from="1624365592270" duration="139000" />
       <workItem from="1624369974597" duration="681000" />
       <workItem from="1624448699685" duration="4525000" />
+      <workItem from="1624453557354" duration="4418000" />
+      <workItem from="1624458809031" duration="15000" />
+      <workItem from="1624477919397" duration="5634000" />
+      <workItem from="1624483813669" duration="150000" />
+      <workItem from="1624485379574" duration="628000" />
     </task>
     <task id="LOCAL-00001" summary="Docker setup for the following databases : &#10;- mongodb&#10;- microsoft sql server">
       <created>1623856389069</created>
