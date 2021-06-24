@@ -16,8 +16,7 @@ module.exports = class Mongodb_connection {
         console.log("entree")
         try {
             await client.connect();
-            await this.listDatabases(client);
-            console.log("result")
+            console.log("Connnection successful to MongoDB");
         } catch (err) {
             console.log(err);
         } finally {

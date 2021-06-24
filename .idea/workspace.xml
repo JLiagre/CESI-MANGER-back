@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="729deed3-bcd7-4cef-8daf-2d3ba4ece26f" name="Default Changelist" comment="Added mongodb connection files with working connection.">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.template" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Centrale/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="729deed3-bcd7-4cef-8daf-2d3ba4ece26f" name="Default Changelist" comment="Updated connectosql()">
+      <change afterPath="$PROJECT_DIR$/Centrale/databases/databases.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Centrale/src/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Centrale/src/controllers/userController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Centrale/src/models/User.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Centrale/src/routes/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Centrale/src/routes/users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/mongodb_connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/mongodb_connection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/mongodb_connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/databases/mongodb_connection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/sqlserver_connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/sqlserver_connection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/sqlserver_connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/databases/sqlserver_connection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docker/import-data.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Docker/import-data.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docker/setup.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Docker/setup.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +30,11 @@
   </component>
   <component name="Git.Settings">
     <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1u2G4Y9Lt6hAUqoHiRRbYR9BHzE" />
@@ -41,19 +47,38 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Centrale/src" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Centrale/src" />
+      <recent name="$PROJECT_DIR$/Centrale/databases" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/DB/mongodb/database" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/Centrale/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -76,7 +101,11 @@
       <workItem from="1624458809031" duration="15000" />
       <workItem from="1624477919397" duration="5634000" />
       <workItem from="1624483813669" duration="150000" />
-      <workItem from="1624485379574" duration="628000" />
+      <workItem from="1624485379574" duration="991000" />
+      <workItem from="1624486529187" duration="1780000" />
+      <workItem from="1624521683585" duration="11498000" />
+      <workItem from="1624540020109" duration="900000" />
+      <workItem from="1624541003657" duration="1615000" />
     </task>
     <task id="LOCAL-00001" summary="Docker setup for the following databases : &#10;- mongodb&#10;- microsoft sql server">
       <created>1623856389069</created>
@@ -99,7 +128,42 @@
       <option name="project" value="LOCAL" />
       <updated>1624266412862</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="- Added .env.template (remove .template) for env variable integration inside the whole project.&#10;- Updated Docker configuration in order for the Central server to startup only after DBs initialization (used wait method for server availability + time waiting for dbs creation).">
+      <created>1624486182509</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1624486182509</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updated Readme.md">
+      <created>1624486358327</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1624486358327</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixed hostname in order for Central server to be reachable.">
+      <created>1624488952659</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1624488952659</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updated .env.template">
+      <created>1624522223805</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1624522223805</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Updated connectosql()">
+      <created>1624523076201</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1624523076201</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +185,11 @@
     <MESSAGE value="Docker setup for the following databases : &#10;- mongodb&#10;- microsoft sql server" />
     <MESSAGE value="Docker setup for the following databases with initial settings/structure: &#10;- microsoft sql server&#10;&#10;Docker init for :&#10;- mongodb" />
     <MESSAGE value="Added mongodb connection files with working connection." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added mongodb connection files with working connection." />
+    <MESSAGE value="- Added .env.template (remove .template) for env variable integration inside the whole project.&#10;- Updated Docker configuration in order for the Central server to startup only after DBs initialization (used wait method for server availability + time waiting for dbs creation)." />
+    <MESSAGE value="Updated Readme.md" />
+    <MESSAGE value="Fixed hostname in order for Central server to be reachable." />
+    <MESSAGE value="Updated .env.template" />
+    <MESSAGE value="Updated connectosql()" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated connectosql()" />
   </component>
 </project>
