@@ -22,8 +22,7 @@ module.exports = class Sqlserver_connection {
         console.log("entree")
         try {
             await sql.connect(sqlConfig)
-            const result = await sql.query`select *
-                                           from Users `
+            const result = await sql.query`SELECT name FROM master.sys.databases`
             console.dir(result)
             console.log("result")
         } catch (err) {
