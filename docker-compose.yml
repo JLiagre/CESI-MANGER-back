@@ -46,7 +46,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - '40253:40253'
-    restart: unless-stopped
+    restart: always
     image: nodejs
     container_name: centrale
     volumes:
