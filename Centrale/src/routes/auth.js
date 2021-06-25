@@ -14,8 +14,8 @@ const opts = {
 router.post('/auth', async (req, res) => {
     const user = await User.findOne({ user: req.query.username, password: req.query.password });
     try{
-        const accessToken = jwt.sign(JSON.stringify(req.query.username), process.env.TOKEN_SECRET)
-        if(match){
+        const accessToken= jwt.sign(JSON.stringify(req.query.username), process.env.TOKEN_SECRET)
+        if(accessToken){
             res.json({ accessToken: accessToken });
         } else {
             res.json({ message: "Invalid Credentials" });

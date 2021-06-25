@@ -1,18 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="729deed3-bcd7-4cef-8daf-2d3ba4ece26f" name="Default Changelist" comment="Working Nodemon for instant container refresh.">
-      <change afterPath="$PROJECT_DIR$/Centrale/src/routes/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/src/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/src/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/core-util-is/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/core-util-is/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/util-deprecate/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/util-deprecate/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="729deed3-bcd7-4cef-8daf-2d3ba4ece26f" name="Default Changelist" comment="Working on Centrale auth with Passport.">
+      <change beforePath="$PROJECT_DIR$/Centrale/src/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/routes/auth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +108,7 @@
       <workItem from="1624561019668" duration="4052000" />
       <workItem from="1624565884735" duration="5113000" />
       <workItem from="1624606497676" duration="5340000" />
-      <workItem from="1624626978001" duration="5287000" />
+      <workItem from="1624626978001" duration="5483000" />
     </task>
     <task id="LOCAL-00001" summary="Docker setup for the following databases : &#10;- mongodb&#10;- microsoft sql server">
       <created>1623856389069</created>
@@ -183,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624608257688</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Working on Centrale auth with Passport.">
+      <created>1624632342060</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1624632342060</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +208,7 @@
     <MESSAGE value="Updated .env.template" />
     <MESSAGE value="Updated connectosql()" />
     <MESSAGE value="Working Nodemon for instant container refresh." />
-    <option name="LAST_COMMIT_MESSAGE" value="Working Nodemon for instant container refresh." />
+    <MESSAGE value="Working on Centrale auth with Passport." />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on Centrale auth with Passport." />
   </component>
 </project>
