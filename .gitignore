@@ -1,3 +1,6 @@
 /DB
 /node_modules/
 .env
+node_modules
+/Centrale/package-lock.json
+/Centrale/yarn.lock
