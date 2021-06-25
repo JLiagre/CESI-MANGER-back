@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="729deed3-bcd7-4cef-8daf-2d3ba4ece26f" name="Default Changelist" comment="Updated connectosql()">
-      <change afterPath="$PROJECT_DIR$/Centrale/databases/databases.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Centrale/src/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Centrale/src/controllers/userController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Centrale/src/models/User.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Centrale/src/routes/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Centrale/src/routes/users.js" afterDir="false" />
+    <list default="true" id="729deed3-bcd7-4cef-8daf-2d3ba4ece26f" name="Default Changelist" comment="Working Nodemon for instant container refresh.">
+      <change afterPath="$PROJECT_DIR$/Centrale/src/routes/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/mongodb_connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/databases/mongodb_connection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/sqlserver_connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/databases/sqlserver_connection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docker/import-data.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Docker/import-data.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docker/setup.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Docker/setup.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/src/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/src/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/core-util-is/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/core-util-is/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/util-deprecate/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/util-deprecate/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +34,17 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Centrale/src/app.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Centrale/databases/sqlserver_connection.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Centrale/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Centrale/databases/databases.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Docker/import-data.sh" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.gitignore" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Centrale/Dockerfile" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/docker-compose.yml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Centrale/src/routes/users.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1u2G4Y9Lt6hAUqoHiRRbYR9BHzE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -106,6 +115,10 @@
       <workItem from="1624521683585" duration="11498000" />
       <workItem from="1624540020109" duration="900000" />
       <workItem from="1624541003657" duration="1615000" />
+      <workItem from="1624561019668" duration="4052000" />
+      <workItem from="1624565884735" duration="5113000" />
+      <workItem from="1624606497676" duration="5340000" />
+      <workItem from="1624626978001" duration="5287000" />
     </task>
     <task id="LOCAL-00001" summary="Docker setup for the following databases : &#10;- mongodb&#10;- microsoft sql server">
       <created>1623856389069</created>
@@ -163,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624523076201</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Working Nodemon for instant container refresh.">
+      <created>1624608257688</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1624608257688</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +210,7 @@
     <MESSAGE value="Fixed hostname in order for Central server to be reachable." />
     <MESSAGE value="Updated .env.template" />
     <MESSAGE value="Updated connectosql()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated connectosql()" />
+    <MESSAGE value="Working Nodemon for instant container refresh." />
+    <option name="LAST_COMMIT_MESSAGE" value="Working Nodemon for instant container refresh." />
   </component>
 </project>
