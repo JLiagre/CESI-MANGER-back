@@ -10,9 +10,9 @@ const opts = {
     secretOrKey: 'yourSecret'
 };
 
+router.use(tokenChecker)
 
 router.get('/', async (req, res) => {
-        await tokenChecker(req, res, null)
         return ("C'est bon !!!!")
     }
 );
