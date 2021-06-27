@@ -4,7 +4,8 @@ const jwt = require('jsonwebtoken');
 const ExtractJwt = require('passport-jwt').ExtractJwt;
 const User = require('../models/User');
 const express = require('express');
-const router = express.Router()
+const router = express.Router();
+const tokenChecker = require('../services/tokenChecker');
 const opts = {
     jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
     secretOrKey: 'yourSecret'
@@ -12,17 +13,41 @@ const opts = {
 
 
 router.post('/auth', async (req, res) => {
-    const user = await User.findOne({ user: req.query.username, password: req.query.password });
-    try{
-        const accessToken= jwt.sign(JSON.stringify(req.query.username), process.env.TOKEN_SECRET)
-        if(accessToken){
-            res.json({ accessToken: accessToken });
+
+    let username = req.query.username
+    let password = req.query.password
+
+    if (!username || !password) {
+        return res.status(401).send()
+    }
+
+    let user = await User.findOne(req.query.username, req.query.password);
+    // console.log("User = " + user.recordset);
+    // console.log("User avec 0!!  = " + user.recordset[0]);
+    try {
+        let accessToken = jwt.sign({name: username}, process.env.TOKEN_SECRET,
+            {
+                expiresIn: process.env.ACCESS_TOKEN_LIFE,
+            })
+        let refreshToken = jwt.sign({name: username}, process.env.REFRESH_TOKEN_SECRET, {
+            expiresIn: process.env.REFRESH_TOKEN_LIFE,
+        })
+        if (user.recordset[0]) {
+            res.cookie("jwt", accessToken, {httpOnly: true})
+            res.cookie("jwtRefresh", refreshToken, {httpOnly: true})
+            res.send()
         } else {
-            res.json({ message: "Invalid Credentials" });
+            res.json({message: "Invalid Credentials"});
         }
-    } catch(e) {
+    } catch (e) {
         console.log(e)
     }
 });
 
+
+router.get('/', async (req, res) => {
+        console.log(req.cookies)
+        tokenChecker(req, res, null)
+    }
+);
 module.exports = router

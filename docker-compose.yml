@@ -28,7 +28,7 @@ services:
         volumes:
             - './DB/sqlserver/database:/data/db'
         restart: unless-stopped
-        image: microsoft/mssql-server-linux:2017-latest
+        image: user1234/mssql-server-linux:2017-latest
         container_name: sqlserv
         hostname: sqlserver
         environment:

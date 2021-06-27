@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="729deed3-bcd7-4cef-8daf-2d3ba4ece26f" name="Default Changelist" comment="Working on Centrale auth with Passport.">
+    <list default="true" id="729deed3-bcd7-4cef-8daf-2d3ba4ece26f" name="Default Changelist" comment="Added auth functionalities with token attribution (in cookie) and check on every api calls (besides /auth).">
+      <change afterPath="$PROJECT_DIR$/Centrale/src/routes/appRouter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Centrale/src/services/tokenChecker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/databases/databases.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/databases/databases.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/databases/sqlserver_connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/databases/sqlserver_connection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/src/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/routes/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +119,8 @@
       <workItem from="1624561019668" duration="4052000" />
       <workItem from="1624565884735" duration="5113000" />
       <workItem from="1624606497676" duration="5340000" />
-      <workItem from="1624626978001" duration="5483000" />
+      <workItem from="1624626978001" duration="5725000" />
+      <workItem from="1624795450306" duration="11408000" />
     </task>
     <task id="LOCAL-00001" summary="Docker setup for the following databases : &#10;- mongodb&#10;- microsoft sql server">
       <created>1623856389069</created>
@@ -180,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624632342060</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Working on Centrale auth with Passport.">
+      <created>1624632675043</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1624632675043</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +228,7 @@
     <MESSAGE value="Updated connectosql()" />
     <MESSAGE value="Working Nodemon for instant container refresh." />
     <MESSAGE value="Working on Centrale auth with Passport." />
-    <option name="LAST_COMMIT_MESSAGE" value="Working on Centrale auth with Passport." />
+    <MESSAGE value="Added auth functionalities with token attribution (in cookie) and check on every api calls (besides /auth)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added auth functionalities with token attribution (in cookie) and check on every api calls (besides /auth)." />
   </component>
 </project>

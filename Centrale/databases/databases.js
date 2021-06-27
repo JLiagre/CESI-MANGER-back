@@ -17,7 +17,7 @@ module.exports = class databases {
 
     getUser(username, password) {
         var sqlinstance = new sql()
-        sqlinstance.getUser(username, password)
+        return sqlinstance.getUser(username, password)
     }
 
 }

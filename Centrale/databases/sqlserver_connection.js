@@ -47,6 +47,8 @@ module.exports = class Sqlserver_connection {
         req += "')"
         var res = await this.requestsql(req)
         console.dir(res)
+        return res;
+
     }
 
     async testsql() {
