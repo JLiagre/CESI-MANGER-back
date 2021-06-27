@@ -15,7 +15,7 @@ module.exports = (req, res, next) => {
             console.log("Bien reçu");
 
         });
-       next();
+       return("ok");
     } else {
         // if there is no token
         // return an error
