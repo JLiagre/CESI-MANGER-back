@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="729deed3-bcd7-4cef-8daf-2d3ba4ece26f" name="Default Changelist" comment="Added auth functionalities with token attribution (in cookie) and check on every api calls (besides /auth).">
-      <change afterPath="$PROJECT_DIR$/Centrale/src/routes/appRouter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Centrale/src/services/tokenChecker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Centrale/src/services/auth-validators.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Centrale/src/services/validator.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/databases/databases.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/databases/databases.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/databases/sqlserver_connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/databases/sqlserver_connection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/src/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/controllers/userController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/src/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/src/routes/appRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/routes/appRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/src/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/routes/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/src/services/tokenChecker.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/services/tokenChecker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +30,19 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="serhat-dev" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -120,7 +135,7 @@
       <workItem from="1624565884735" duration="5113000" />
       <workItem from="1624606497676" duration="5340000" />
       <workItem from="1624626978001" duration="5725000" />
-      <workItem from="1624795450306" duration="11408000" />
+      <workItem from="1624795450306" duration="26034000" />
     </task>
     <task id="LOCAL-00001" summary="Docker setup for the following databases : &#10;- mongodb&#10;- microsoft sql server">
       <created>1623856389069</created>
@@ -199,7 +214,28 @@
       <option name="project" value="LOCAL" />
       <updated>1624632675043</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added auth functionalities with token attribution (in cookie) and check on every api calls (besides /auth).">
+      <created>1624806893181</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1624806893182</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Added auth functionalities with token attribution (in cookie) and check on every api calls (besides /auth).">
+      <created>1624807116669</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1624807116669</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added auth functionalities with token attribution (in cookie) and check on every api calls (besides /auth).">
+      <created>1624808333922</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1624808333922</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

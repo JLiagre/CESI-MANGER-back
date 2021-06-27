@@ -1,9 +1,9 @@
 const jwt = require('jsonwebtoken')
 
 
-module.exports = (req, res) => {
+module.exports = (req, res, next) => {
 
-    const token = req.cookies.jwt ? req.cookies.jwt : false
+    let token = req.cookies.jwt ? req.cookies.jwt : false
 
     if (token) {
         // verifies secret and checks exp
@@ -13,11 +13,10 @@ module.exports = (req, res) => {
             }
             req.decoded = decoded;
             console.log("Bien reçu");
+            next();
         });
-        return  res.status(200)
+
     } else {
-        // if there is no token
-        // return an error
         return res.status(403).send({
             "error": true,
             "message": 'No token provided.'

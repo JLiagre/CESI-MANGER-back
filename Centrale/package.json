@@ -15,7 +15,8 @@
     "nodemon": "^2.0.7",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "validatorjs": "^3.22.1"
   },
   "scripts": {
     "start": "nodemon src/app.js --watch /home/node/app "

@@ -1,5 +1,7 @@
 const sql = require('mssql')
 
+
+
 const sqlConfig = {
     user: process.env.SQLSERVER_USERNAME,
     password: process.env.SQLSERVER_PASSWORD,
@@ -19,7 +21,7 @@ const sqlConfig = {
 module.exports = class Sqlserver_connection {
 
     async requestsql(req) {
-        console.log("Entree")
+        console.log(req)
         try {
             let con = await sql.connect(sqlConfig)
             var request = new sql.Request();
@@ -51,12 +53,21 @@ module.exports = class Sqlserver_connection {
 
     }
 
+    async createUser(UserDTO ) {
+
+        var req = "INSERT INTO Users  ([user_name],[password],[name],[surname],[telephone],[email],[address],[zip],[city],[contry]) VALUES (${UserDTO.username}, ${UserDTO.password},${UserDTO.name},${UserDTO.surname},${UserDTO.telephone},${UserDTO.email},${UserDTO.address},${UserDTO.zip},${UserDTO.city},${UserDTO.username})"
+        var res = await this.requestsql(req)
+        console.dir(res)
+        return res;
+}
+
     async testsql() {
         var req = "SELECT name FROM master.sys.databases"
         var res = await this.requestsql(req)
         console.dir(res)
 
     }
+
 }
 
 
