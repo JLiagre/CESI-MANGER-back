@@ -12,16 +12,17 @@ module.exports = class databases {
 
     getUsers() {
         var sqlinstance = new sql()
-        sqlinstance.getUsers()
+        return sqlinstance.getUsers()
     }
 
     getUser(username, password) {
         var sqlinstance = new sql()
-        sqlinstance.getUser(username, password)
+        return sqlinstance.getUser(username, password)
     }
+
     createUser(user) {
         var sqlinstance = new sql()
-        sqlinstance.createUser(user)
+        return sqlinstance.createUser(user)
     }
 
 

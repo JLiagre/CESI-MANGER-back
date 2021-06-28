@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="729deed3-bcd7-4cef-8daf-2d3ba4ece26f" name="Default Changelist" comment="Added auth functionalities with token attribution (in cookie) and check on every api calls (besides /auth).">
-      <change afterPath="$PROJECT_DIR$/Centrale/src/services/auth-validators.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Centrale/src/services/validator.js" afterDir="false" />
+    <list default="true" id="729deed3-bcd7-4cef-8daf-2d3ba4ece26f" name="Default Changelist" comment="(WIP) Reorganized controllers and account creation. Errors on some callbacks">
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/databases/databases.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/databases/databases.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/databases/sqlserver_connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/databases/sqlserver_connection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/src/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/src/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/src/routes/appRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/routes/appRouter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/src/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/routes/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/src/services/tokenChecker.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/services/tokenChecker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/src/services/auth-validators.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/services/auth-validators.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,8 +63,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Centrale/src" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -135,7 +131,8 @@
       <workItem from="1624565884735" duration="5113000" />
       <workItem from="1624606497676" duration="5340000" />
       <workItem from="1624626978001" duration="5725000" />
-      <workItem from="1624795450306" duration="26034000" />
+      <workItem from="1624795450306" duration="27744000" />
+      <workItem from="1624863662820" duration="3304000" />
     </task>
     <task id="LOCAL-00001" summary="Docker setup for the following databases : &#10;- mongodb&#10;- microsoft sql server">
       <created>1623856389069</created>
@@ -235,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624808333922</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="(WIP) Reorganized controllers and account creation. Errors on some callbacks">
+      <created>1624829644160</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1624829644160</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +269,7 @@
     <MESSAGE value="Working Nodemon for instant container refresh." />
     <MESSAGE value="Working on Centrale auth with Passport." />
     <MESSAGE value="Added auth functionalities with token attribution (in cookie) and check on every api calls (besides /auth)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added auth functionalities with token attribution (in cookie) and check on every api calls (besides /auth)." />
+    <MESSAGE value="(WIP) Reorganized controllers and account creation. Errors on some callbacks" />
+    <option name="LAST_COMMIT_MESSAGE" value="(WIP) Reorganized controllers and account creation. Errors on some callbacks" />
   </component>
 </project>

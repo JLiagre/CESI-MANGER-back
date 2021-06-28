@@ -12,38 +12,42 @@ userController.auth = async function (json) {
     return user
 }
 
-userController.findOne = async function (req,res) {
+userController.login = async function (req, res) {
     let username = req.query.username
     let password = req.query.password
 
     if (!username || !password) {
-         res.status(401).send()
+        res.status(401).send()
     }
     console.log("IN TRY")
 
     var dbco = new databases();
     let user = await dbco.getUser(username, password);
-    console.log("LE USER ")
-    console.log(user)
+    console.log("LE USER " + user)
     try {
-        if (user.recordset[0]) {
-            console.log("IN TRYIIIII")
+        if (user && user.recordset[0]) {
+            let accessToken = jwt.sign({username}, process.env.TOKEN_SECRET, {
+                expiresIn: process.env.ACCESS_TOKEN_LIFE
+            })
+            let refreshToken = jwt.sign({username}, process.env.REFRESH_TOKEN_SECRET, {
+                expiresIn: process.env.REFRESH_TOKEN_LIFE
+            })
             res.cookie("jwt", accessToken, {httpOnly: true})
             res.cookie("jwtRefresh", refreshToken, {httpOnly: true})
-             res.send('T')
+            return res.send('Utilisateur connecté !')
         } else {
-             json({message: "Invalid Credentials"});
+            res.json({message: "Invalid Credentials"});
         }
     } catch (e) {
-          res.status(412).send();
-        console.log(e)
+        console.log(e);
+        return res.status(412).send();
+
     }
 }
 
-
 userController.createUser = async function (req, res) {
-    var dbco = new connection();
-    return await dbco.createUser(req);
+    var dbco = new databases();
+    return await dbco.createUser(req.query);
 }
 
 module.exports = {

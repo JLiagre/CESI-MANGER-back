@@ -10,7 +10,7 @@ const authValidator = require('../services/auth-validators');
 const {userController} = require('../controllers/userController');
 
 
-router.post('/', userController.findOne);
+router.post('/', userController.login);
 router.post('/signup', authValidator.signup, userController.createUser);
 
 

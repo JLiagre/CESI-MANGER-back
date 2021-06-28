@@ -15,9 +15,9 @@ const signup = (req, res, next) => {
         "zip": "int",
 
     }
-    validator(req.body, validationRule, {}, (err, status) => {
+    validator(req.query, validationRule, {}, (err, status) => {
         console.log("THIS IS BODY!");
-        console.log(req.body);
+        console.log(req.query);
         if (!status) {
             res.status(412)
                 .send({

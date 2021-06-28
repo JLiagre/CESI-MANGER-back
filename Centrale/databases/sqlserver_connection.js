@@ -54,8 +54,8 @@ module.exports = class Sqlserver_connection {
     }
 
     async createUser(UserDTO ) {
-
-        var req = "INSERT INTO Users  ([user_name],[password],[name],[surname],[telephone],[email],[address],[zip],[city],[contry]) VALUES (${UserDTO.username}, ${UserDTO.password},${UserDTO.name},${UserDTO.surname},${UserDTO.telephone},${UserDTO.email},${UserDTO.address},${UserDTO.zip},${UserDTO.city},${UserDTO.username})"
+        console.log(UserDTO);
+        var req = `'INSERT INTO Users  ([user_name],[password],[name],[surname],[telephone],[email],[address],[zip],[city],[country]) VALUES (${UserDTO.username}, ${UserDTO.password},${UserDTO.name},${UserDTO.surname},${UserDTO.telephone ||'0000' },${UserDTO.email || 'df'},${UserDTO.address || 'df'},${UserDTO.zip || '000'},${UserDTO.city || 'df'},${UserDTO.country || 'df'})'`
         var res = await this.requestsql(req)
         console.dir(res)
         return res;
