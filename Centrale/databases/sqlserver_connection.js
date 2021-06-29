@@ -1,7 +1,6 @@
 const sql = require('mssql')
 
 
-
 const sqlConfig = {
     user: process.env.SQLSERVER_USERNAME,
     password: process.env.SQLSERVER_PASSWORD,
@@ -53,21 +52,46 @@ module.exports = class Sqlserver_connection {
 
     }
 
-    async createUser(UserDTO ) {
+    async createUser(UserDTO) {
         console.log(UserDTO);
-        var req = `'INSERT INTO Users  ([user_name],[password],[name],[surname],[telephone],[email],[address],[zip],[city],[country]) VALUES (${UserDTO.username}, ${UserDTO.password},${UserDTO.name},${UserDTO.surname},${UserDTO.telephone ||'0000' },${UserDTO.email || 'df'},${UserDTO.address || 'df'},${UserDTO.zip || '000'},${UserDTO.city || 'df'},${UserDTO.country || 'df'})'`
+        var req = `INSERT INTO Users (user_name, password, name, surname, telephone, email, address, zip, city, country,
+                                      status)
+                   VALUES ('${UserDTO.username}', HASHBYTES('SHA1', '${UserDTO.password}'), '${UserDTO.name}',
+                           '${UserDTO.surname}',
+                           '${UserDTO.telephone || ''}', '${UserDTO.email || ''}', '${UserDTO.address || ''}',
+                           '${UserDTO.zip || ''}', '${UserDTO.city || ''}', '${UserDTO.country || ''}', 'NEW')`
+        console.log(req);
         var res = await this.requestsql(req)
         console.dir(res)
         return res;
-}
+    }
+
+    async deleteUser(id) {
+        var req = `DELETE
+                   FROM Users
+                   WHERE ID = ${id}`
+        console.log(req);
+        var res = await this.requestsql(req)
+        console.dir(res)
+        return res;
+    }
+
+    async disableUser(id) {
+        console.log("OOOOOOOOOOOOOOOOOOOOOOOOOH");
+        var req = `UPDATE Users
+                   SET status = 'disabled'
+                   WHERE ID = ${id}`
+        console.log(req);
+        var res = await this.requestsql(req)
+        console.dir(res)
+        return res;
+    }
 
     async testsql() {
         var req = "SELECT name FROM master.sys.databases"
         var res = await this.requestsql(req)
         console.dir(res)
-
     }
-
 }
 
 

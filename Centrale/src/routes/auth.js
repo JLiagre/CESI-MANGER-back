@@ -12,6 +12,6 @@ const {userController} = require('../controllers/userController');
 
 router.post('/', userController.login);
 router.post('/signup', authValidator.signup, userController.createUser);
-
-
+router.post('/delete', tokenChecker, userController.deleteUser);
+router.post('/disable', tokenChecker, userController.disableUser);
 module.exports = router

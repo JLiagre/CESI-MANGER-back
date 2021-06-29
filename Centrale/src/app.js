@@ -7,7 +7,8 @@ const HOST = "0.0.0.0";
 const routes = require('./routes');
 const cookieParser = require('cookie-parser');
 var databases = require('../databases/databases');
-
+var cors = require('cors');
+const bodyParser = require('body-parser')
 var db = new databases();
 db.connect();
 db.getUsers();
@@ -17,7 +18,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 app.use(cookieParser())
 app.use('/', routes)
-
+app.use(bodyParser.json({ type: '*/*' }))
 app.use(morgan('dev'));
 
 

@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="729deed3-bcd7-4cef-8daf-2d3ba4ece26f" name="Default Changelist" comment="(WIP) Reorganized controllers and account creation. Errors on some callbacks">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.template" beforeDir="false" afterPath="$PROJECT_DIR$/.env.template" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/databases/databases.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/databases/databases.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/databases/sqlserver_connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/databases/sqlserver_connection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/src/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/controllers/userController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/src/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/routes/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/src/services/auth-validators.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/services/auth-validators.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docker/import-data.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Docker/import-data.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Docker/setup.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Docker/setup.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +75,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Centrale/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -132,7 +139,17 @@
       <workItem from="1624606497676" duration="5340000" />
       <workItem from="1624626978001" duration="5725000" />
       <workItem from="1624795450306" duration="27744000" />
-      <workItem from="1624863662820" duration="3304000" />
+      <workItem from="1624863662820" duration="6644000" />
+      <workItem from="1624885019272" duration="4706000" />
+      <workItem from="1624911506582" duration="36000" />
+      <workItem from="1624952821856" duration="3286000" />
+      <workItem from="1624956592452" duration="5253000" />
+      <workItem from="1624973386221" duration="2081000" />
+      <workItem from="1624976614827" duration="1736000" />
+      <workItem from="1624981411571" duration="599000" />
+      <workItem from="1624988649586" duration="803000" />
+      <workItem from="1624994946079" duration="2088000" />
+      <workItem from="1624998105872" duration="356000" />
     </task>
     <task id="LOCAL-00001" summary="Docker setup for the following databases : &#10;- mongodb&#10;- microsoft sql server">
       <created>1623856389069</created>
@@ -239,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624829644160</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="(WIP) Reorganized controllers and account creation. Errors on some callbacks">
+      <created>1624867168615</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1624867168616</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

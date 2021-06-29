@@ -7,15 +7,15 @@ const signup = (req, res, next) => {
         "surname": "required|string",
         "username": "required|string",
         "email": "email",
-        "phone": "string",
+        "phone": "integer",
         "password": "required|string|min:6",
         "address": "string",
         "city": "string",
         "country": "string",
-        "zip": "int",
+        "zip": "string",
 
     }
-    validator(req.query, validationRule, {}, (err, status) => {
+    validator(req.body, validationRule, {}, (err, status) => {
         console.log("THIS IS BODY!");
         console.log(req.query);
         if (!status) {
