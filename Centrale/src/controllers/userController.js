@@ -24,7 +24,7 @@ userController.login = async function (req, res) {
 
     var dbco = new databases();
     let user = await dbco.getUser(username, password);
-    console.log("LE USER " + user)
+    console.log("LE USER " + user.recordset[0])
     try {
         if (user && user.recordset[0]) {
             let accessToken = jwt.sign({username}, process.env.TOKEN_SECRET, {
@@ -35,7 +35,7 @@ userController.login = async function (req, res) {
             })
             res.cookie("jwt", accessToken, {httpOnly: true})
             res.cookie("jwtRefresh", refreshToken, {httpOnly: true})
-            return res.send('Utilisateur connecté !')
+            return res.send(user).json()
         } else {
             res.status(401).send({error: "Invalid credentials !"});
         }
@@ -47,7 +47,6 @@ userController.login = async function (req, res) {
 }
 
 userController.createUser = async function (req, res) {
-    console.log("OUAIS");
     console.log(req);
     var dbco = new databases();
     try {

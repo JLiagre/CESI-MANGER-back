@@ -55,11 +55,11 @@ module.exports = class Sqlserver_connection {
     async createUser(UserDTO) {
         console.log(UserDTO);
         var req = `INSERT INTO Users (user_name, password, name, surname, telephone, email, address, zip, city, country,
-                                      status)
+                                      status, userRole)
                    VALUES ('${UserDTO.username}', HASHBYTES('SHA1', '${UserDTO.password}'), '${UserDTO.name}',
                            '${UserDTO.surname}',
                            '${UserDTO.telephone || ''}', '${UserDTO.email || ''}', '${UserDTO.address || ''}',
-                           '${UserDTO.zip || ''}', '${UserDTO.city || ''}', '${UserDTO.country || ''}', 'NEW')`
+                           '${UserDTO.zip || ''}', '${UserDTO.city || ''}', '${UserDTO.country || ''}', 'NEW', '${UserDTO.userRole}')`
         console.log(req);
         var res = await this.requestsql(req)
         console.dir(res)

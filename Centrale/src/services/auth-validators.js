@@ -13,6 +13,7 @@ const signup = (req, res, next) => {
         "city": "string",
         "country": "string",
         "zip": "string",
+        "userRole": "required:string"
 
     }
     validator(req.body, validationRule, {}, (err, status) => {

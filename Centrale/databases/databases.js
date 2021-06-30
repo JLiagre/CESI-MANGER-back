@@ -21,7 +21,6 @@ module.exports = class databases {
     }
 
     createUser(user) {
-        console.log(user)
         var sqlinstance = new sql()
         return sqlinstance.createUser(user)
     }

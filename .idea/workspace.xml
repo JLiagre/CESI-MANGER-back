@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="729deed3-bcd7-4cef-8daf-2d3ba4ece26f" name="Default Changelist" comment="(WIP) Reorganized controllers and account creation. Errors on some callbacks">
-      <change beforePath="$PROJECT_DIR$/.env.template" beforeDir="false" afterPath="$PROJECT_DIR$/.env.template" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/databases/databases.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/databases/databases.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/databases/sqlserver_connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/databases/sqlserver_connection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/src/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/src/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/src/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/routes/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/src/services/auth-validators.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/services/auth-validators.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Docker/import-data.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Docker/import-data.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Docker/setup.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Docker/setup.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -150,6 +141,10 @@
       <workItem from="1624988649586" duration="803000" />
       <workItem from="1624994946079" duration="2088000" />
       <workItem from="1624998105872" duration="356000" />
+      <workItem from="1625002548139" duration="298000" />
+      <workItem from="1625041707892" duration="1468000" />
+      <workItem from="1625043469246" duration="2251000" />
+      <workItem from="1625049686047" duration="600000" />
     </task>
     <task id="LOCAL-00001" summary="Docker setup for the following databases : &#10;- mongodb&#10;- microsoft sql server">
       <created>1623856389069</created>
