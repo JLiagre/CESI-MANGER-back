@@ -58,6 +58,24 @@ userController.createUser = async function (req, res) {
     }
 }
 
+userController.createUserSharp = async  function(req,res){
+    req.body.userRole=="client"
+    if(req.body.securite !== null) {
+        console.log(req);
+        var dbco = new databases();
+        try {
+           const list = await dbco.createUserSharp(req.body);
+            return res.status(200).send()
+        } catch (e) {
+            return res.status(412).send();
+
+        }
+    }else{
+        return  res.status(412).send();
+    }
+
+
+}
 userController.deleteUser = async function (req, res, next) {
     var dbco = new databases();
     var id = req.query.id;
@@ -92,6 +110,27 @@ userController.disableUser = async function (req, res, next) {
 
 }
 
+
+userController.edit = async function (req, res, next) {
+    var dbco = new databases();
+    console.log(req.body)
+    console.log()
+    console.log("CONTROLLER")
+    var id = req.body.id;
+    console.log(id);
+    if (!id) {
+        console.log("No id given");
+        return res.status(403).send();
+    }
+    try {
+        const i = await dbco.editUser(id, req.body.data);
+        console.log(i);
+        return res.status(200).send(i);
+    } catch (e) {
+        return res.status(412).send();
+    }
+
+}
 module.exports = {
     userController,
 }

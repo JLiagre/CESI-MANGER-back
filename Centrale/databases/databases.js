@@ -25,20 +25,46 @@ module.exports = class databases {
         return sqlinstance.createUser(user)
     }
 
+    createUserSharp(user) {
+        var sqlinstance = new sql()
+        return sqlinstance.createUserSharp(user)
+    }
 
     deleteUser(id) {
         var sqlinstance = new sql()
         return sqlinstance.deleteUser(id)
     }
 
-
+    editUser(id, req){
+        console.log("INSIDE DB")
+        var sqlinstance = new sql()
+        return sqlinstance.editUser(id, req)
+    }
+    
     disableUser(id) {
         var sqlinstance = new sql()
         return sqlinstance.disableUser(id)
     }
 
+    createRestaurant(restaurant){
+        var mongoinstance = new mongodb()
+        return mongoinstance.createRestaurant(restaurant)
+    }
 
+    getRestaurants(id){
+        var mongoinstance = new mongodb()
+        return mongoinstance.getRestaurants(id)
+    }
 
+    deleteRestaurant(id){
+        var mongoinstance = new mongodb()
+        mongoinstance.deleteRestaurant(id)
+    }
+
+    editRestaurant(id){
+        var mongoinstance = new mongodb()
+        mongoinstance.editRestaurant(id)
+    }
 
 
 }

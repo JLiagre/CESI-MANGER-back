@@ -52,6 +52,14 @@ module.exports = class Sqlserver_connection {
 
     }
 
+    async getUserbyID(id) {
+        var req = "SELECT * FROM Users WHERE ID ="
+        req += id
+        var res = await this.requestsql(req)
+        console.dir(res)
+        return res;
+    }
+
     async createUser(UserDTO) {
         console.log(UserDTO);
         var req = `INSERT INTO Users (user_name, password, name, surname, telephone, email, address, zip, city, country,
@@ -59,7 +67,8 @@ module.exports = class Sqlserver_connection {
                    VALUES ('${UserDTO.username}', HASHBYTES('SHA1', '${UserDTO.password}'), '${UserDTO.name}',
                            '${UserDTO.surname}',
                            '${UserDTO.telephone || ''}', '${UserDTO.email || ''}', '${UserDTO.address || ''}',
-                           '${UserDTO.zip || ''}', '${UserDTO.city || ''}', '${UserDTO.country || ''}', 'NEW', '${UserDTO.userRole}')`
+                           '${UserDTO.zip || ''}', '${UserDTO.city || ''}', '${UserDTO.country || ''}', 'NEW',
+                           '${UserDTO.userRole}')`
         console.log(req);
         var res = await this.requestsql(req)
         console.dir(res)
@@ -91,6 +100,76 @@ module.exports = class Sqlserver_connection {
         var req = "SELECT name FROM master.sys.databases"
         var res = await this.requestsql(req)
         console.dir(res)
+    }
+
+    async createUserSharp(id) {
+        console.log(UserDTO);
+        var req = `INSERT INTO Users (user_name, password, name, surname, telephone, email, address, zip, city, country,
+                                      status, userRole)
+                   VALUES ('${UserDTO.username}', HASHBYTES('SHA1', '${UserDTO.password}'), '${UserDTO.name}',
+                           '${UserDTO.surname}',
+                           '${UserDTO.telephone || ''}', '${UserDTO.email || ''}', '${UserDTO.address || ''}',
+                           '${UserDTO.zip || ''}', '${UserDTO.city || ''}', '${UserDTO.country || ''}', 'NEW',
+                           '${UserDTO.userRole}')`
+        console.log(req);
+        try {
+            await this.requestsql(req)
+            return this.getUsers()
+        } catch (e) {
+        }
+
+        console.dir(res)
+        return res;
+    }
+
+    async editUser(id, user) {
+        const data = Object.entries(user).map(([key, value]) => ({key, value}));
+        console.log(data)
+        console.log("INSIDE EDIT SQL")
+        console.log(user)
+        console.log(user.username)
+        var req = "UPDATE Users SET "
+        try {
+            for (var element in data) {
+                console.log(data[element])
+                console.log(data[element].key)
+                console.log(data[element].value)
+                if (data[element].value != "" && data[element].value != null) {
+                    if (data[element].key == "password") {
+                        data[element].value = `HASHBYTES('SHA1', '${data[element].value}')`
+                        req += data[element].key
+                        req += `=${data[element].value},`
+                    } else {
+                        req += data[element].key
+                        req += `='${data[element].value}',`
+                    }
+                }
+            }
+        } catch (e) {
+            console.log(e.message)
+        }
+        var editedText = req.slice(0, -1)
+        editedText += ` WHERE ID = ${id}`
+        console.log(req)
+        await this.requestsql(editedText)
+        var res = this.getUserbyID(id)
+        console.dir(res)
+        return res
+
+        // AUTOMATIC REQUEST BUILDER
+        //
+        // if(user.user_name!="" && user.user_name!=null){
+        //     req+= user_name
+        // }
+
+        // var req = `INSERT INTO Users (user_name, password, name, surname, telephone, email, address, zip, city, country,
+        //                               status, userRole)
+        //            VALUES ('${UserDTO.username}', HASHBYTES('SHA1', '${UserDTO.password}'), '${UserDTO.name}',
+        //                    '${UserDTO.surname}',
+        //                    '${UserDTO.telephone || ''}', '${UserDTO.email || ''}', '${UserDTO.address || ''}',
+        //                    '${UserDTO.zip || ''}', '${UserDTO.city || ''}', '${UserDTO.country || ''}', 'NEW', '${UserDTO.userRole}')`
+        // console.log(req);
+
     }
 }
 
