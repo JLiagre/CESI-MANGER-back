@@ -25,13 +25,13 @@ const RestaurantSchema = new Schema({
     opening_days : {
         type: Array
     },
-    opening_hours : [{hours: Object }],
+    opening_hours : [{type: String }],
     menu: [
         {
-            title: String,
+            name: String,
             description: String,
-            image: String,
-            price: String,
+            prix: String,
+            status: String,
         }
     ]
 })

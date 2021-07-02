@@ -43,13 +43,23 @@ restaurantController.editRestaurant = async function (req, res) {
     try {
         console.log(req.query.id)
         const list = await dbco.editRestaurant(req.query.id);
+        console.log("finale")
         return res.status(200).send(list);
     } catch (e) {
         return res.status(412).send();
     }
 }
 
-
+restaurantController.menuCreate = async function (req, res) {
+    console.log(req);
+    var dbco = new databases();
+    try {
+        const list =await dbco.createMenu(req.body.id, req.body);
+        return res.status(200).send(list)
+    } catch (e) {
+        return res.status(412).send();
+    }
+}
 module.exports = {
     restaurantController,
 }

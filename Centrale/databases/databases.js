@@ -63,7 +63,12 @@ module.exports = class databases {
 
     editRestaurant(id){
         var mongoinstance = new mongodb()
-        mongoinstance.editRestaurant(id)
+        return mongoinstance.editRestaurant(id)
+    }
+    
+    createMenu(id, menu){
+        var mongoinstance = new mongodb()
+        return mongoinstance.createMenu(id, menu)
     }
 
 
