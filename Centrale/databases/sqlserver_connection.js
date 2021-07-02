@@ -156,7 +156,9 @@ module.exports = class Sqlserver_connection {
         console.dir(res)
         return res
 
-        // AUTOMATIC REQUEST BUILDER
+
+
+              // AUTOMATIC REQUEST BUILDER
         //
         // if(user.user_name!="" && user.user_name!=null){
         //     req+= user_name
@@ -171,6 +173,8 @@ module.exports = class Sqlserver_connection {
         // console.log(req);
 
     }
+
+   
 }
 
 

@@ -71,5 +71,11 @@ module.exports = class databases {
         return mongoinstance.createMenu(id, menu)
     }
 
+    getAll(){
+        var mongoinstance = new mongodb()
+        return mongoinstance.getAll()
+    }
+    
+
 
 }

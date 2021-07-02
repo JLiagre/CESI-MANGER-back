@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="729deed3-bcd7-4cef-8daf-2d3ba4ece26f" name="Default Changelist" comment="User detail account modifs are saved (backend) and new state is given back to the front.">
+    <list default="true" id="729deed3-bcd7-4cef-8daf-2d3ba4ece26f" name="Default Changelist" comment="WIP : Opening hours">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/databases/databases.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/databases/databases.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/databases/mongodb_connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/databases/mongodb_connection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/databases/sqlserver_connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/databases/sqlserver_connection.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/src/controllers/restaurantController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/controllers/restaurantController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/src/models/Restaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/models/Restaurant.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/src/routes/restaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/routes/restaurant.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -164,7 +164,8 @@
       <workItem from="1625160192436" duration="4125000" />
       <workItem from="1625170058565" duration="7037000" />
       <workItem from="1625208722532" duration="5015000" />
-      <workItem from="1625217068712" duration="1236000" />
+      <workItem from="1625217068712" duration="2018000" />
+      <workItem from="1625225184254" duration="1708000" />
     </task>
     <task id="LOCAL-00001" summary="Docker setup for the following databases : &#10;- mongodb&#10;- microsoft sql server">
       <created>1623856389069</created>
@@ -292,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625175004666</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="WIP : Opening hours">
+      <created>1625219639958</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1625219639958</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,6 +333,7 @@
     <MESSAGE value="(WIP) Reorganized controllers and account creation. Errors on some callbacks" />
     <MESSAGE value="Minor improvements" />
     <MESSAGE value="User detail account modifs are saved (backend) and new state is given back to the front." />
-    <option name="LAST_COMMIT_MESSAGE" value="User detail account modifs are saved (backend) and new state is given back to the front." />
+    <MESSAGE value="WIP : Opening hours" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP : Opening hours" />
   </component>
 </project>

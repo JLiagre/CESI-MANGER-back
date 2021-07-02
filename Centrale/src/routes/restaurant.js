@@ -14,5 +14,6 @@ router.post('/create', tokenChecker, restaurantController.createRestaurant);
 router.get('/', tokenChecker, restaurantController.getRestaurants);
 router.get('/delete', tokenChecker, restaurantController.deleteRestaurant);
 router.get('/edit', tokenChecker, restaurantController.editRestaurant);
-
+router.post('/menuCreate', tokenChecker, restaurantController.menuCreate);
+router.get('/all', tokenChecker, restaurantController.getAll);
 module.exports = router

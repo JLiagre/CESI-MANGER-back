@@ -60,6 +60,16 @@ restaurantController.menuCreate = async function (req, res) {
         return res.status(412).send();
     }
 }
+restaurantController.getAll(req, res)
+{
+    var dbco = new databases();
+    try {
+        const list =await dbco.getAll();
+        return res.status(200).send(list)
+    } catch (e) {
+        return res.status(412).send();
+    }
+}
 module.exports = {
     restaurantController,
 }

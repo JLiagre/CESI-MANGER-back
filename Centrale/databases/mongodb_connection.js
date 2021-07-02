@@ -77,9 +77,7 @@ module.exports = class Mongodb_connection {
         const records = await restaurant.findById(mongoose.Types.ObjectId(id));
         console.log(records)
         return records
-
         console.log("Connnection successful to MongoDB");
-
     }
 
     async createMenu(id, menu) {
@@ -88,14 +86,24 @@ module.exports = class Mongodb_connection {
         } catch (err) {
             console.log(err);
         }
-        const records = await restaurant.findByIdAndUpdate(mongoose.Types.ObjectId(id),{"menu": menu});
+        const records = await restaurant.findByIdAndUpdate( { _id: mongoose.Types.ObjectId(id) },  { $push: { "menu": menu  } },{useFindAndModify: false});
         console.log(records)
         const res = await restaurant.findById(mongoose.Types.ObjectId(id));
         return res
-
         console.log("Connnection successful to MongoDB");
-
     }
+
+    async getAll()   {
+        try {
+            mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
+        } catch (err) {
+            console.log(err);
+        }
+        const records = await restaurant.find();
+        console.log(records)
+        return records
+        console.log("Connnection successful to MongoDB");
+}
 }
 
 
