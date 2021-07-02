@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="729deed3-bcd7-4cef-8daf-2d3ba4ece26f" name="Default Changelist" comment="Minor improvements">
-      <change afterPath="$PROJECT_DIR$/Centrale/src/controllers/restaurantController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Centrale/src/models/Restaurant.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Centrale/src/routes/restaurant.js" afterDir="false" />
+    <list default="true" id="729deed3-bcd7-4cef-8daf-2d3ba4ece26f" name="Default Changelist" comment="User detail account modifs are saved (backend) and new state is given back to the front.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/databases/databases.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/databases/databases.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Centrale/databases/mongodb_connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/databases/mongodb_connection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/databases/sqlserver_connection.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/databases/sqlserver_connection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/src/controllers/userController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/controllers/userController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/src/routes/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/routes/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/src/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/routes/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Centrale/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/src/controllers/restaurantController.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/controllers/restaurantController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/src/models/Restaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/models/Restaurant.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Centrale/src/routes/restaurant.js" beforeDir="false" afterPath="$PROJECT_DIR$/Centrale/src/routes/restaurant.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +162,9 @@
       <workItem from="1625086259637" duration="3238000" />
       <workItem from="1625121865974" duration="8935000" />
       <workItem from="1625160192436" duration="4125000" />
-      <workItem from="1625170058565" duration="4872000" />
+      <workItem from="1625170058565" duration="7037000" />
+      <workItem from="1625208722532" duration="5015000" />
+      <workItem from="1625217068712" duration="1236000" />
     </task>
     <task id="LOCAL-00001" summary="Docker setup for the following databases : &#10;- mongodb&#10;- microsoft sql server">
       <created>1623856389069</created>
@@ -291,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625051154949</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="User detail account modifs are saved (backend) and new state is given back to the front.">
+      <created>1625175004666</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1625175004666</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,6 +324,7 @@
     <MESSAGE value="Added auth functionalities with token attribution (in cookie) and check on every api calls (besides /auth)." />
     <MESSAGE value="(WIP) Reorganized controllers and account creation. Errors on some callbacks" />
     <MESSAGE value="Minor improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor improvements" />
+    <MESSAGE value="User detail account modifs are saved (backend) and new state is given back to the front." />
+    <option name="LAST_COMMIT_MESSAGE" value="User detail account modifs are saved (backend) and new state is given back to the front." />
   </component>
 </project>

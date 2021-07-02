@@ -81,6 +81,21 @@ module.exports = class Mongodb_connection {
         console.log("Connnection successful to MongoDB");
 
     }
+
+    async createMenu(id, menu) {
+        try {
+            mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
+        } catch (err) {
+            console.log(err);
+        }
+        const records = await restaurant.findByIdAndUpdate(mongoose.Types.ObjectId(id),{"menu": menu});
+        console.log(records)
+        const res = await restaurant.findById(mongoose.Types.ObjectId(id));
+        return res
+
+        console.log("Connnection successful to MongoDB");
+
+    }
 }
 
 
