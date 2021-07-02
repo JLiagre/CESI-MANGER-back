@@ -1,7 +1,10 @@
 const {MongoClient} = require('mongodb');
+const restaurant = require('../src/models/Restaurant');
+const uri = `mongodb://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_HOSTNAME}/cesiManger?retryWrites=true&w=majority&authSource=admin`;
+const mongoose = require('mongoose');
 
-const uri = `mongodb://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@${process.env.MONGO_HOSTNAME}/test?retryWrites=true&w=majority&authSource=admin`;
 const client = new MongoClient(uri);
+
 
 module.exports = class Mongodb_connection {
 
@@ -11,19 +14,75 @@ module.exports = class Mongodb_connection {
         databasesList.databases.forEach(db => console.log(` - ${db.name}`));
     }
 
-    async connecttomongo() {
+    async connecttomongo(req) {
         console.log(uri);
-        console.log("entree")
+        console.log("entree");
+        console.log(req);
         try {
-            await client.connect();
+            await mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true}).then(req.save().then(() => {
+                console.log('Everything went well');
+            }).catch((e) => {
+                console.log('There was an error', e.message);
+            }))
             console.log("Connnection successful to MongoDB");
         } catch (err) {
             console.log(err);
-        } finally {
-            await client.close();
         }
     }
+
+    async createRestaurant(data) {
+        console.log("INSIDE MONGO CO CLASS");
+
+        let model = new restaurant(data);
+        try {
+            return await this.connecttomongo(model)
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    async getRestaurants(id) {
+        try {
+            mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
+        } catch (err) {
+            console.log(err);
+        }
+        const records = await restaurant.find().where('userID').in(id).exec();
+        console.log(records)
+        return records
+
+        console.log("Connnection successful to MongoDB");
+
+    }
+
+    async deleteRestaurant(id) {
+        try {
+            mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
+            await restaurant.findByIdAndRemove(mongoose.Types.ObjectId(id), {useFindAndModify: false});
+        }
+    catch (err) {
+            console.log(err);
+        }
+        console.log("ID ICIC")
+        console.log(id)
+        console.log("Connnection successful to MongoDB");
+    }
+
+    async editRestaurant(id) {
+        try {
+            mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false})
+        } catch (err) {
+            console.log(err);
+        }
+        const records = await restaurant.findById(mongoose.Types.ObjectId(id));
+        console.log(records)
+        return records
+
+        console.log("Connnection successful to MongoDB");
+
+    }
 }
+
 
 
 
