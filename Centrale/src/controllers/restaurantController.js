@@ -70,6 +70,17 @@ restaurantController.getAll= async function(req, res)
         return res.status(412).send();
     }
 }
+
+restaurantController.getMenus= async function(req, res)
+{
+    var dbco = new databases();
+    try {
+        const list =await dbco.editRestaurant(req.body.id);
+        return res.status(200).send(list)
+    } catch (e) {
+        return res.status(412).send();
+    }
+}
 module.exports = {
     restaurantController,
 }
