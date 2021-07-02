@@ -75,7 +75,10 @@ restaurantController.getMenus= async function(req, res)
 {
     var dbco = new databases();
     try {
-        const list =await dbco.editRestaurant(req.body.id);
+        console.log(req.body.id)
+        const list =await dbco.editRestaurant(req.query.id);
+        console.log('ICIIII')
+        console.log(list)
         return res.status(200).send(list)
     } catch (e) {
         return res.status(412).send();
